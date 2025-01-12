@@ -1,0 +1,27 @@
+input.ng-touched.ng-valid {
+    border: 3px solid green;
+}
+
+input.ng-touched.ng-invalid {
+
+    border: 3px solid red;
+}
+
+.form-gap {
+    margin-top: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    text-align: center;
+    color: blue;
+}
+
+span {
+    color: red;
+}

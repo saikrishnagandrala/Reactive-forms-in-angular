@@ -1,0 +1,20 @@
+<h3> Reactive Form-2 </h3>
+
+<div class="form-container">
+<form [formGroup]="regForm" (ngSubmit)="show()">
+<div>
+    Username: <input type="text" class="form-control m-2" formControlName="username">
+    <span *ngIf="regForm.controls.username.touched && regForm.controls.username?.errors?.['required']"> username is required</span>
+    <span *ngIf="regForm.controls.username.touched && regForm.controls.username.errors?.['minlength']"> minimum 8 characters is required</span>
+</div>
+
+<div>
+    Password: <input type="text" class="form-control m-2" formControlName="password">
+    <span *ngIf="regForm.controls.password.touched && regForm.controls.password.errors?.['required']"> password is required </span>
+    <span *ngIf="regForm.controls.password.touched && regForm.controls.password.errors?.['minlength']"> minimum 15 characters is required </span>
+</div>
+
+    <button class="btn btn-primary">login</button>
+
+</form>
+</div>

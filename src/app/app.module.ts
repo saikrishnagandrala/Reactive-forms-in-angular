@@ -3,14 +3,21 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { Form1Component } from './form1/form1.component';
+import { Form2Component } from './form2/form2.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Form1Component,
+    Form2Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+   ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
